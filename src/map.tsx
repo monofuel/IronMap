@@ -89,6 +89,11 @@ export default class IronMap extends React.Component<IronMapProps, IronMapState>
 		}
 	}
 
+	async pingIp(ip: string) {
+		const location = await getip(ip);
+		this.ping(location);
+	}
+
 	ping(coord: Coordinate, color?: string) {
 		if (coord.long < -180 || coord.long > 180) {
 			throw new Error('expected longitude between -180 and 180');
