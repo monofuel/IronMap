@@ -12,7 +12,7 @@ const mapHeight = 1221;
 const mapWidth = 1652;
 const backgroundColor = '#1f4456';
 
-const pingColor = '#ff0000';
+const pingColor = '#42f4c5';
 
 export default class IronMap extends React.Component<IronMapProps, IronMapState> {
 

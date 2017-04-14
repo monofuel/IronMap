@@ -13,16 +13,16 @@ export default class PingAnimation implements Animation {
   draw(ctx: CanvasRenderingContext2D) {
     ctx.beginPath();
     ctx.arc(this.center.x, this.center.y, this.radius, 0, 2 * Math.PI, false);
-    ctx.lineWidth = 5;
+    ctx.lineWidth = 3;
     ctx.strokeStyle = this.color;
     ctx.stroke();
   }
 
   update() {
-    this.radius++;
+    this.radius += 0.1;
   }
 
   isComplete(): boolean {
-    return this.radius > 10;
+    return this.radius > 20;
   }
 }
